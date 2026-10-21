@@ -1,37 +1,14 @@
-@font-face {
-  font-family: "CMU Serif";
-  src: url("fonts/cmunrm.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+@import url("./static/fonts/fonts.css");
 
-@font-face {
-  font-family: "CMU Serif";
-  src: url("fonts/cmunbx.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "CMU Serif";
-  src: url("fonts/cmunti.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "CMU Serif";
-  src: url("fonts/cmunbi.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
+:root {
+  --bg: #f6f3ed;
+  --text: #1a1a1a;
 }
 
 body {
   font-family: "CMU Serif", Georgia, serif;
   font-size: 1.15rem;
   line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
 }
