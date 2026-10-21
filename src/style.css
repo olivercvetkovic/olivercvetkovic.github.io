@@ -1,3 +1,5 @@
+@import url("./static/fonts/fonts.css");
+
 body {
   font-family: "CMU Serif", Georgia, serif;
   font-size: 1.2rem;
@@ -19,7 +21,7 @@ h1 {
   font-size: 3rem;
   line-height: 1.1;
   font-weight: 700;
-  margin: 0 0 2.5rem;
+  margin: 0 0 1rem;
   text-align: left;
   hyphens: manual;
 }
@@ -35,4 +37,8 @@ h2 {
 
 p {
   margin: 0 0 0.75em;
+}
+
+li {
+  margin-bottom: 0.25rem;
 }

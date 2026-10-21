@@ -1,34 +1,58 @@
 @font-face {
   font-family: "CMU Serif";
-  src: url("fonts/cmu-serif-500-roman.woff2") format("woff2");
+  src: url("cmu-serif-500-roman.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "CMU Serif";
-  src: url("fonts/cmu-serif-500-italic.woff2") format("woff2");
+  src: url("cmu-serif-500-italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "CMU Serif";
-  src: url("fonts/cmu-serif-700-roman.woff2") format("woff2");
+  src: url("cmu-serif-700-roman.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "CMU Serif";
-  src: url("fonts/cmu-serif-700-italic.woff2") format("woff2");
+  src: url("cmu-serif-700-italic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 
-body {
-  font-family: "CMU Serif", Georgia, serif;
-  font-size: 1.15rem;
-  line-height: 1.5;
+/* TeX Gyre Pagella (Palatino-style, the mathpazo text font) */
+@font-face {
+  font-family: "TeX Gyre Pagella";
+  src: url("pagella-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TeX Gyre Pagella";
+  src: url("pagella-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TeX Gyre Pagella";
+  src: url("pagella-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TeX Gyre Pagella";
+  src: url("pagella-bolditalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
 }
