@@ -18,9 +18,22 @@
     <script defer src="/static/mathjax/tex-mml-chtml-mathjax-pagella.js"></script>
   </head>
   <body>
-    <h1 class="super-title">Leibniz's Calculus</h1>
+    <h1>Leibniz's Calculus</h1>
 
     <h2>Abstract</h2>
+
+    <p>
+      If you are reading this, I am assuming you have probably seen the definition of the derivative of a function before. Perhaps you first encountered it in high-school, defined as
+      $$
+      f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+      $$
+      If you were fortuntate enough, maybe your teacher explained what it means to take a limit. Perhaps by describing it as the act of getting closer and closer towards a value without ever reaching it.
+      Anyway it doesn't matter. You probably forgot all about the definition because shortly after, your teacher showed you the power rule, chain rule etc, all that fancy machinery!
+    </p>
+
+    <p>
+      Maybe you then went on to study mathematics at university where in your introductory real analysis course, the definition of a limit was finally put on firm grounding. Or maybe you went and studied something more useful like economics where you mindlessly applied the fancy machinery and considered yourself intelligent for it. I digress.
+    </p>
 
     <p>
       In the late 17th Century, a mathematical revolution was on the horizon. In 1684, Gottfried Wilhelm Leibniz published a paper with a the rather long title: <i>Nova methodus pro maximis et minimis, itemque tangentibus, quae nec fractas nec irrationales, quantitates moratur, et singulare pr illi calculi genus.</i> or if you prefer in English <i>A new method for Maxima and Minima as Well as Tangents, Which is Impeded Neither by Fractional Nor by Irrational Quantities, and a Remarkable Type of Calculus for This.</i>
@@ -40,8 +53,118 @@
     <p><strong>[IMAGE HERE]</strong></p>
 
     <p>
-      Leibniz considered the straight line on which $P$ and $Q$ lie on, and wondered, what were to happen to this line should you fix $P$ and move $Q$ toward it, following the path of the curve.
+      Leibniz considered the straight line on which $P$ and $Q$ lie on, and wondered, what were to happen to this line should you fix $P$ and move $Q$ toward it, following the path of the curve. It is clear to see that as $Q$ gets closer and closer to P, this line gets closer and closer to the line that <i>just</i> touches the curve at $P$. With this picture in mind, Leibniz postulated that the line on which $P$ and $Q$ lie on was <i>exactly</i> the tangent line at $P$, when $P$ and $Q$ are infinitely close to one another, yet still distinct.
     </p>
+
+    <p><strong>[IMAGE HERE]</strong></p>
+
+    <p>
+      It is with this intuitive setup, that Leibniz defined the notion of <i>infinitesimals</i>. Let $P = (x,y)$ and $Q = (x', y')$. If $P$ and $Q$ are infinitely close to one another (bust still distinct!), then $x$ and $x'$ must be inifnitely close to one another (bust still distinct), and similarly for $y$ and $y'$. Leibniz said that in this case, the difference $x - x'$ is <i>infinitely small</i> but not zero. He denoted this infinitesimal difference by $dx$, and similarly $dy$ for the infinitesimal difference between $y$ and $y'$.
+    </p>
+
+    <p>
+      Therefore, since the slope of a straight line is the change in $y$ divided by the change in $x$, Leibniz deduced that $\mathrm{d}x$ and $\mathrm{d}y$ are related by the equation
+
+      $$
+      \mathrm{d}y = (\text{slope of tangent line at } P) \cdot \mathrm{d}x
+      $$
+
+      and by dividing both sides by $\mathrm{d}x$, we obtain the familiar expression
+
+      $$
+      \frac{\mathrm{d}y}{\mathrm{d}x} = \text{slope of tangent line at } P
+      $$
+    </p>
+
+    <p>
+      Leibniz referred to $\mathrm{d}x$ as a <i>differential</i> which is why we sometimes refer to calculus by <i>differential calculus</i>.
+    </p>
+
+    <h2>The Leibniz rules</h2>
+
+    <p>
+      Following this, Leibniz presented his <i>rules of calculus</i>, though without proof. Even in the 17th century proofs were sometimes left as an exercie to the reader! I introduced Leibniz's notion of the differential through considering the slop of the tangent line at a point on a curve, which is the division of two differentials. Therefore it makes sense to give some rules for manipulating these differentials directly and so perhaps a more apt name for these tules is <i>the algebra of differentials</i>.
+
+      I have stated these rules below almost exxactly as Leibniz stated them in his paper. Indeed , you may find some of them quite familiar.
+
+      $$
+      \text{If } a \text{ is a given constant, then } \mathrm{d}a = 0 \text{ and if } y = ax \text{ then } \mathrm{d}y = a\mathrm{d}x.
+      $$
+      Now, addition and subtraction:
+      $$
+      \text{if } v = z - y + w + x \text{ then } \mathrm{d}v = \mathrm{d}z - \mathrm{dy} + \mathrm{d}w + \mathrm{d}x
+      $$
+      Multiplication (product rule):
+      $$
+      \text{ if } y = vx \text{ then } \mathrm{d}y = v\mathrm{d}x + x\mathrm{d}v
+      $$
+      and lastly, division (quotient rule):
+      $$
+      \text{if } z = \frac{v}{y} \text{ then } \mathrm{d}z = \frac{v \mathrm{d}y - y \mathrm{d}v}{yy}
+      $$
+    </p>
+
+    <p>
+      Let us do the proof of the product rule using Leibniz's notion of infinitesimals, but I shall leave the rest up to you, as Leibniz intended! Consider two quantities $v, x$ and denote their product $y = vx$. We can interpret this product as an area
+    </p>
+
+    <p><strong>IMAGE HERE</strong></p>
+
+    <p>
+      We would like to find dy, so let us consider $y + \mathrm{d}y$. We can interpret this as pertubing $y$ by an infinitesimal amount, $\mathrm{d}y$. Since $y = vx$, this pertubation must induce a pertubation in $v$ and $x$ respectively.
+    </p>
+
+    <p><strong>IMAGE HERE</strong></p>
+
+    <p>
+    Therefore, we can write
+    $$
+    y + \mathrm{d}y = (v + \mathrm{d}v)(x + \mathrm{d}x) = vx + v\mathrm{d}x + x\mathrm{d}v + \mathrm{d}v\mathrm{d}x
+    $$
+    </p>
+
+    <p>
+    Stay with me for this next part, or if you're a physicist you probably won't even flinch. Since $\mathrm{d}v$ and $\mathrm{d}x$ are infinitely small, Leibniz reasoned that $\mathrm{d}v \mathrm{d}x$ must be even more infinitely small and therefore we can just sweep it under the rug. Essentially, Leibniz treated the product of infinitsimals as negligible. Therefore, we are left with
+
+   $$
+   y + \mathrm{d}y = vx + v\mathrm{d}x + x\mathrm{d}v
+   $$
+
+   and since $y = vx$, subtracting y from both sides yields the result, $dy = vdx + xdv$.
+  </p>
+
+  <p>
+    Now, you probably felt uneasy in the middle there. After all, how can the product of two infinitely small quantities be even more infinitely small? What does it even mean to be infinitely small if there is something even smaller? Leibniz was also uneasy of his logic, but his methods <i>worked</i>. They provided verifiably correct answers to previously unsolved problems. In fact, the invention of differential calculus was so profound that it revealed an entirely new catalogue problems mathematicians of the day could research. One such problem was <i>the brachistrochone problem</i>.
+  </p>
+
+
+  <h2>The brachistrochone problem</h2>
+  <p>
+    In 1696, Johann Bernoulli famously posed the following problem to the mathematicians of Europe.
+    <i>
+      I, Johann Bernoulli, address the most brilliant mathematicians in the world. Nothing is more attractive to intelligent people than an honest, challenging problem, whose possible solution will bestow fame and remain as a lasting monument. Following the example set by Pascal, Fermat, etc., I hope to gain the gratitude of the whole scientific community by placing before the finest mathematicians of our time a problem which will test their methods and the strength of their intellect. If someone communicates to me the solution of the proposed problem, I shall publicly declare him worthy of praise.
+    </i>
+  </p>
+  <p>
+    The problem he posed was the following.
+      Given two points $A$ and $B$ in a vertical plane, what is the curve traced out by a point acted on only by gravity, which starts at $A$ and reaches $B$ in the shortest time?
+  </p>
+
+  <p>
+    Bernoulli initially set a 6 month deadline for his contemporaries to send in their solutions to the brachistrochone problem. Through persuasion by Leibniz, Bernoulli extended this deadline to allow foreign mathematicians to have a chance at solving the problem. In the end five solutions were obtained alongside Johann Bernoulli's, Leibniz, Guillaume de L'Hopital, Jacob Bernoulli, and Sir Isaac Newton.
+  </p>
+  <p>
+    At this point, Newton had abandoned mathematical reserach and taken up a position in the government as Warden of the Royal Mint. According to Newton's biographer, one day upon returning home from the Royal Mint, he recieved Bernoulli's letter and proceeded to work through the evening and early morning until he solved the brachistrochone problem. Newton sent his solution anonymously to Bernoulli who immediately recognised the work as Newton's. It is said that Bernoulli remarked <i>Tanquam ex ungue leonem</i>. I recognised the lion by his claws.
+  </p>
+
+  <p><strong>IMAGE HERE</strong></p>
+
+
+
+
+  <p>
+
+  </p>
 
   </body>
 </html>
