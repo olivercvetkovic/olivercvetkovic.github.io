@@ -134,8 +134,60 @@
   </p>
 
   <p>
-    Now, you probably felt uneasy in the middle there. After all, how can the product of two infinitely small quantities be even more infinitely small? What does it even mean to be infinitely small if there is something even smaller? Leibniz was also uneasy of his logic, but his methods <i>worked</i>. They provided verifiably correct answers to previously unsolved problems. In fact, the invention of differential calculus was so profound that it revealed an entirely new catalogue problems mathematicians of the day could research. One such problem was <i>the brachistrochone problem</i>.
+    Now, you probably felt uneasy in the middle there. After all, how can the product of two infinitely small quantities be even more infinitely small? What does it even mean to be infinitely small if there is something even smaller? Leibniz was also uneasy of his logic, but his methods <i>worked</i>. They provided verifiably correct answers to previously unsolved problems. In fact, the invention of differential calculus was so profound that it opened up an entirely new catalogue of problems for mathematicians of the day to sink their teeth into. One such problem was <i>the brachistrochone problem</i>.
   </p>
+
+  <h2>The Fundamental Theorem of Calculus</h2>
+  <p>"We, now mounting to greater heights, obtain the area of a figure by finding the figure of its summatrix or quadratrix".
+  Given a curve $y = f(x)$, we seek to find the area of the region enclosed between the curve and the horizontal $x$-axis. Leibniz considered strips or rectangles of infinitesimal width bounded by the curve.
+  </p>
+
+  <p><strong>IMAGE HERE</strong></p>
+
+  <p>Leibniz reasoned that the sum of all these rectangles is exactly the area we seek to find. What about the triangles I hear you ask. Akin to his logic for neglecting the product of infinitesimals, Leibniz reasoned that the area of the triangles are negligeble compared to the area of the rectangles. They surely had smaller height compared to the rectangles and smaller width, therefore they must be infinitely smaller than the already infinitely small rectangles!</p>
+
+  <p>
+    Mathematically, the area of one of these recangles is simply $y \cdot \mathrm{d}x$. And since the area is the sum of all such rectangles we deduce
+    $$
+    \text{Area} = \sum y\mathrm{d}x
+    $$
+    where omn is short for omnia in latin which translates to "all" or "everything". Unfortunately this formula isn't very useful to us. It doesn't actually give us a way of computing the area, we'd have to take a sum of infinitely many things that are infinitely small.
+  </p>
+
+  <p>
+    We now mount to the greater heights that Leibniz foreshadowed. Leibniz considered the problem from an entirely different perspective. He started by supposing the existence of a curve $z = g(x)$ such that its derivative function is exactly $y = f(x)$
+
+    $$
+    \frac{\mathrm{d}z}{\mathrm{d}x} = y
+    $$
+
+    Remember, to Leibniz $\frac{dz}{dx}$ was actually a fraction, and so he re-arranged the equation for
+
+    $$
+    \mathrm{d}z = y\mathrm{dx}
+    $$
+
+    Geometrically, $y\mathrm{d}x$ is the area of one of the rectangles bounded by the curve $y$ of infinitely small width $dx$. Therefore, if we sum both sides, we obtain the area swept by the curve $y$.
+
+    $$ Area = \sum y\mathrm{d}x = \sum dz = z $$
+
+    Here Leibniz imparts the final component of his calculus notation. He introduces the integral.
+
+    $$ Area = \int y \mathrm{d}x = z $$
+
+    Leibniz had "derived" the fundamental theorem of calculus. I cannot express the profoundness of his discovery.
+
+    $$ \frac{dz}{dx} = y \quad z = \int y\mathrm{d}x $$
+
+  <p>
+
+  </p>
+
+
+  </p>
+
+
+
 
 
   <h2>The brachistrochone problem</h2>
